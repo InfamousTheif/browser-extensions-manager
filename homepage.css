@@ -1,0 +1,397 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+input, textarea, button, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+:root {
+  --display: block;
+  --bgGradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --Neutral-300: hsl(0, 0%, 78%);
+  --Neutral-200: hsl(217, 61%, 90%);
+  --toggle-clr: hsl(0, 0%, 93%);
+  --primary: hsl(200, 60%, 99%);
+  --hover-toggle: hsl(3, 86%, 64%);
+  --Red-500: hsl(3, 71%, 56%);
+  --active-toggle: hsl(3, 77%, 44%);
+
+  --mode-toggle: hsl(0, 0%, 93%);
+  --remove-buttonFocus: hsl(0, 0%, 78%);
+  --inactive-listbutton: hsl(200, 60%, 99%);
+  --inactive-listcolor: hsl(227, 75%, 14%);
+  --active-listbutton:hsl(3, 77%, 44%);
+  --active-listcolor: hsl(200, 60%, 99%);
+
+  --fs-normal: 1.2rem;
+  --fs-ext-title: 0.8rem;
+  --primary-f-clr: hsl(227, 75%, 14%);
+  --secondary-f-color: hsl(226, 11%, 37%);   
+}
+
+@media (prefers-color-scheme: dark){
+  :root {
+  --display: block;
+  --bgGradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --Neutral-300: hsl(0, 0%, 78%);
+  --Neutral-200: hsl(225, 23%, 24%);
+  --toggle-clr: hsl(226, 11%, 37%);
+  --primary: hsl(226, 25%, 17%);
+  --hover-toggle: hsl(3, 86%, 64%);
+  --Red-500: hsl(3, 71%, 56%);
+  --active-toggle: hsl(3, 71%, 56%);
+
+  --mode-toggle: hsl(225, 23%, 24%);
+  --remove-buttonFocus: hsl(226, 11%, 37%);
+  --inactive-listbutton: hsl(226, 11%, 37%);
+  --inactive-listcolor: hsl(200, 60%, 99%);
+  --active-listbutton:hsl(3, 71%, 56%);
+  --active-listcolor: hsl(227, 75%, 14%);
+
+  --fs-normal: 1.2rem;
+  --fs-ext-title: 0.8rem;
+  --primary-f-clr: hsl(200, 60%, 99%);
+  --secondary-f-color: hsl(0, 0%, 78%);   
+}
+}
+
+.light-mode {
+  color-scheme: light;
+  --display: block;
+  --bgGradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --Neutral-300: hsl(0, 0%, 78%);
+  --Neutral-200: hsl(217, 61%, 90%);
+  --toggle-clr: hsl(0, 0%, 93%);
+  --primary: hsl(200, 60%, 99%);
+  --hover-toggle: hsl(3, 86%, 64%);
+  --Red-500: hsl(3, 71%, 56%);
+  --active-toggle: hsl(3, 77%, 44%);
+
+  --mode-toggle: hsl(0, 0%, 93%);
+  --remove-buttonFocus: hsl(0, 0%, 78%);
+  --inactive-listbutton: hsl(200, 60%, 99%);
+  --inactive-listcolor: hsl(227, 75%, 14%);
+  --active-listbutton:hsl(3, 77%, 44%);
+  --active-listcolor: hsl(200, 60%, 99%);
+
+  --fs-normal: 1.2rem;
+  --fs-ext-title: 0.8rem;
+  --primary-f-clr: hsl(227, 75%, 14%);
+  --secondary-f-color: hsl(226, 11%, 37%);  
+}
+
+.dark-mode {
+  color-scheme: dark;
+  --display: block;
+  --bgGradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --Neutral-300: hsl(0, 0%, 78%);
+  --Neutral-200: hsl(225, 23%, 24%);
+  --toggle-clr: hsl(226, 11%, 37%);
+  --primary: hsl(226, 25%, 17%);
+  --hover-toggle: hsl(3, 86%, 64%);
+  --Red-500: hsl(3, 71%, 56%);
+  --active-toggle: hsl(3, 71%, 56%);
+
+  --mode-toggle: hsl(225, 23%, 24%);
+  --remove-buttonFocus: hsl(226, 11%, 37%);
+  --inactive-listbutton: hsl(226, 11%, 37%);
+  --inactive-listcolor: hsl(200, 60%, 99%);
+  --active-listbutton:hsl(3, 71%, 56%);
+  --active-listcolor: hsl(227, 75%, 14%);
+
+  --fs-normal: 1.2rem;
+  --fs-ext-title: 0.8rem;
+  --primary-f-clr: hsl(200, 60%, 99%);
+  --secondary-f-color: hsl(0, 0%, 78%); 
+}
+
+/* :root {
+  --bgGradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+  --Neutral-900: hsl(227, 75%, 14%);
+  --Neutral-800: hsl(226, 25%, 17%);
+  --Neutral-700: hsl(225, 23%, 24%);
+  --Neutral-600: hsl(226, 11%, 37%);
+} */
+
+/* noto-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/noto-sans-v39-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/noto-sans-v39-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* noto-sans-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/noto-sans-v39-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+body {
+  font-family: Noto Sans, sans-serif;
+  background: var(--bgGradient);
+  padding-bottom: 200px;
+}
+
+.show {
+  display: block ;
+}
+
+.hide {
+  display: none ;
+}
+
+.h-navigation {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.h-content {
+  margin-top: 2rem;
+  background: var(--primary);
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 15px;
+  border-radius: 7px;
+  box-shadow: 1px 1px 2px 1px var(--Neutral-200);
+}
+
+.theme-toggle {
+  position: relative;
+  background-color: var(--mode-toggle);
+  border: none;
+  border-radius: 7px;
+  padding: 3px 9px;
+  transition: 0.3s background-color;
+}
+
+.theme-toggle::after {
+  position: absolute;
+  z-index: 2;
+  content: attr(aria-label);
+  color: var(--primary-f-clr);
+  background-color: var(--inactive-listbutton);
+  width: max-content;
+  font-size: 1rem;
+  left: -4.4rem;
+  top: 120%;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: top;
+  transition: transform 0ms linear 60ms, opacity 60ms linear;
+}
+
+.theme-toggle:hover {
+  background-color: var(--Neutral-300);
+}
+
+.theme-toggle:focus-visible {
+  outline: 1px solid var(--active-toggle);
+  outline-offset: 0.1rem;
+}
+
+.theme-toggle:hover::after {
+  opacity: .9;
+  transform: scale(1);
+}
+
+.extensions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 80px;
+  padding: 0 2rem;
+}
+
+.ext-toggle-wrapper {
+  color: var(--primary-f-clr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  font-size: var(--fs-normal);
+  margin-bottom: 30px;
+}
+
+.toggles {
+  display: flex;
+  gap: 10px;
+}
+
+.list-button {
+  color: var(--inactive-listcolor);
+  background: var(--inactive-listbutton);
+  border: solid 1px var(--toggle-clr);
+  border-radius: 40px;
+  padding: 4px 12px;
+  opacity: 1;
+  transition: 0.3s opacity;
+}
+
+.active-list-button {
+  color: var(--active-listcolor);
+  background: var(--active-listbutton);
+}
+
+.list-button:hover {
+  opacity: 0.8;
+}
+
+.list-button:focus-visible {
+  outline: 2px solid var(--active-toggle);
+  outline-offset: 0.1rem;
+}
+
+.extension-content {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.extensions-grid {
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.extension-wrapper {
+  background: var(--primary);
+  color: var(--primary-f-clr);
+  font-size: 0.8rem;
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px 1px var(--Neutral-200);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.info-row {
+  font-size: var(--fs-ext-title);
+  display: flex;
+  gap: 1rem;
+}
+
+.info-txt > p {
+  color: var(--secondary-f-color);
+}
+
+.actions-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.remove-button {
+  font-weight: 500;
+  color: var(--primary-f-clr);
+  background: var(--primary);
+  border: solid 1px var(--toggle-clr);
+  border-radius: 40px;
+  padding: 4px 12px;
+  transition: 0.3s;
+}
+
+.remove-button:hover {
+  color: var(--primary);
+  background: var(--active-toggle);
+}
+
+.remove-button:focus-visible {
+  background-color: var(--remove-buttonFocus);
+  outline: 2px solid var(--active-toggle);
+  outline-offset: 0.1rem;
+}
+
+.toggle-button {
+  background-color: var(--toggle-clr);
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+}
+
+.toggle-button:focus {
+  outline: 2px solid var(--active-toggle);
+  outline-offset: 0.18rem;
+}
+
+.toggle-button::before {
+  position: absolute;
+  content: '';
+  background-color: var(--primary);
+  width: 16px;
+  height: 18px;
+  border-radius: 50%;
+  top: 1px;
+  left: 1px;
+  transition: 0.3s;
+}
+
+input:checked + .toggle-button {
+  background: var(--active-toggle);
+}
+
+input:checked + .toggle-button::before {
+  transform: translateX(18px);
+}
+
+input {
+  display: none;
+}
+
+@media screen and (width > 539px) {
+  .ext-toggle-wrapper {
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+
+@media screen and (width > 1082px) {
+  .extensions-grid {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+
+  .extensions-container {
+    padding: 0 10rem;
+    }
+}

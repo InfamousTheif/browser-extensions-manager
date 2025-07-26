@@ -42,8 +42,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub page](https://github.com/InfamousTheif/browser-extensions-manager)
+- Live Site URL: [Live page](https://infamoustheif.github.io/browser-extensions-manager/)
 
 ## My process
 
@@ -126,5 +126,4 @@ Learn to use grid better and become more skilled in css.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@InfamousTheif](https://www.frontendmentor.io/profile/InfamousTheif)
